@@ -1,3 +1,5 @@
 function makeFriendsList(friends) {
-  // ваш код...
+  const unstyledList = document.createElement('UL');
+  unstyledList.insertAdjacentHTML('beforeend', friends.map(friend => `<li>${friend.firstName} ${friend.lastName}</li>`).join(''));
+  return unstyledList;
 }
